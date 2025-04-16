@@ -15,12 +15,12 @@ groupadd GRP_SEC
 
 echo "Creating users..."
 
-useradd chandler -m -s /bin/bash -p $(openss1 passwd -crypt WhatsMyJob123) -G GRP_ADM
-useradd joey -m -s /bin/bash -p $(openss1 passwd -crypt JoeyDontShareFood123) -G GRP_ADM
-useradd ross -m -s /bin/bash -p $(openss1 passwd -crypt Unagi123) -G GRP_VEN
-useradd monica -m -s /bin/bash -p $(openss1 passwd -crypt MegaOrganizedPassword123) -G GRP_VEN
-useradd rachel -m -s /bin/bash -p $(openss1 passwd -crypt RalphLauren123) -G GRP_SEC
-useradd phoebe -m -s /bin/bash -p $(openss1 passwd -crypt SmellyCat123) -G GRP_SEC
+useradd chandler -m -s /bin/bash -p $(openssl passwd -crypt WhatsMyJob123) -G GRP_ADM
+useradd joey -m -s /bin/bash -p $(openssl passwd -crypt JoeyDontShareFood123) -G GRP_ADM
+useradd ross -m -s /bin/bash -p $(openssl passwd -crypt Unagi123) -G GRP_VEN
+useradd monica -m -s /bin/bash -p $(openssl passwd -crypt MegaOrganizedPassword123) -G GRP_VEN
+useradd rachel -m -s /bin/bash -p $(openssl passwd -crypt RalphLauren123) -G GRP_SEC
+useradd phoebe -m -s /bin/bash -p $(openssl passwd -crypt SmellyCat123) -G GRP_SEC
 
 echo "Specifying directories permissions..."
 
